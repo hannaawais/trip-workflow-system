@@ -1,0 +1,65 @@
+PS C:\Users\hanna.awais\trip-workflow-system> npm install
+
+up to date, audited 513 packages in 14s
+
+67 packages are looking for funding
+  run `npm fund` for details
+
+5 moderate severity vulnerabilities
+
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\hanna.awais\trip-workflow-system> npm run db:push
+
+> rest-express@1.0.0 db:push
+> drizzle-kit push
+
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'C:\Users\hanna.awais\trip-workflow-system\drizzle.config.ts'
+Using 'pg' driver for database querying
+[✓] Pulling schema from database...
+[✓] Changes applied
+PS C:\Users\hanna.awais\trip-workflow-system> npx drizzle-kit generate
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'C:\Users\hanna.awais\trip-workflow-system\drizzle.config.ts'
+8 tables
+admin_requests 14 columns 0 indexes 1 fks
+audit_logs 5 columns 0 indexes 1 fks
+departments 7 columns 0 indexes 2 fks
+project_assignments 4 columns 0 indexes 2 fks
+project_documents 10 columns 0 indexes 2 fks
+projects 9 columns 0 indexes 3 fks
+trip_requests 20 columns 0 indexes 3 fks
+users 10 columns 0 indexes 0 fks
+
+[✓] Your SQL migration file ➜ migrations\0000_wooden_nextwave.sql 🚀
+PS C:\Users\hanna.awais\trip-workflow-system> npx drizzle-kit migrate
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'C:\Users\hanna.awais\trip-workflow-system\drizzle.config.ts'
+Using 'pg' driver for database querying
+[⣯] applying migrations...error: type "request_type" already exists
+    at C:\Users\hanna.awais\trip-workflow-system\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\hanna.awais\trip-workflow-system\node_modules\src\pg-core\dialect.ts:102:7)     
+    at async NodePgSession.transaction (C:\Users\hanna.awais\trip-workflow-system\node_modules\src\node-postgres\session.ts:193:19)
+    at async PgDialect.migrate (C:\Users\hanna.awais\trip-workflow-system\node_modules\src\pg-core\dialect.ts:95:3)    at async migrate (C:\Users\hanna.awais\trip-workflow-system\node_modules\src\node-postgres\migrator.ts:10:2) { 
+  length: 92,
+  severity: 'ERROR',
+  code: '42710',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'typecmds.c',
+  line: '1179',
+  routine: 'DefineEnum'
+}
+PS C:\Users\hanna.awais\trip-workflow-system> 

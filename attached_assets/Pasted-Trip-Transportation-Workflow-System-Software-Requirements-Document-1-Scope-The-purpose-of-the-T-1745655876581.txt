@@ -1,0 +1,201 @@
+Trip Transportation Workflow System - Software Requirements Document
+
+1. Scope
+
+The purpose of the Trip Transportation Workflow System is to automate the manual daily process of transportation and administrative trip requests. The system focuses on automating trip approvals and financial auditing leading to payment processing.
+
+Administrative services are considered support services to the main trip transportation purpose. Examples include requests for increasing a department’s or project’s monthly budget.
+
+2. General System Design
+
+Deployment
+
+Hosted on-premises (company servers)
+
+Accessible via internal intranet only
+
+Authentication & Login
+
+System will manage its own user accounts (no Active Directory integration)
+
+Password reset via email required
+
+Only English language is supported
+
+3. Users & Roles
+
+Roles
+
+Employee
+
+Department Manager
+
+Project Manager
+
+Finance
+
+Admin
+
+User Management
+
+Roles assigned manually by System Admin
+
+Users can belong to multiple projects but only one department
+
+Managers can delegate their approval rights
+
+4. Forms & Data Entry
+
+Trip Request Form
+
+Fields:
+
+Trip Date
+
+Origin
+
+Destination
+
+Purpose
+
+Cost
+
+KM
+
+Optional Attachment (PDF only)
+
+Administrative Request Form
+
+Fields:
+
+Request Subject (Text)
+
+Request Description (Text)
+
+Optional Attachment (PDF only)
+
+Administrative request service is unified for all administrative needs
+
+Administrative requests are approved/rejected by Finance only
+
+Editing Requests
+
+Users cannot edit submitted requests
+
+Users must cancel and create a new one if needed
+
+Recurring Trips
+
+No recurring trip requests supported
+
+5. Approval Workflows
+
+Department-Based Trip Requests
+
+Approval sequence: Department Manager → Department Second Approval → Finance Audit
+
+Employee belongs to only one department
+
+Project-Based Trip Requests
+
+Approval sequence: Project Manager → Project Second Approval → Finance Audit
+
+Employees can be assigned to multiple projects
+
+Administrative Requests
+
+Finance directly approves or rejects administrative requests
+
+Finance Role
+
+Finance audits and can approve or reject requests
+
+Budget Enforcement
+
+System flags over-budget requests to Finance for manual review
+
+Users receive a warning if a request exceeds available budget
+
+6. Budget Management
+
+Budget Setup
+
+Finance/Admin creates departments and sets monthly budget limits
+
+Project Managers create projects but must request Finance/Admin to set or update project budgets
+
+Budget Tracking
+
+System deducts trip cost from department/project budget upon Finance approval
+
+Original budget value is preserved and viewable
+
+Budget Period
+
+Budgets are managed monthly only
+
+Budget Increase Tracking
+
+Budget increase administrative requests do NOT automatically update the budget; Finance must manually adjust
+
+Budget Reporting
+
+Monthly reports for Finance showing:
+
+Total approved trips and costs
+
+Budget used vs remaining
+
+Over-budget approvals
+
+7. Notifications & Audit Trail
+
+Notifications
+
+Notifications sent by Email only
+
+Requesters receive notification and rejection reason (if applicable)
+
+Audit Trail
+
+All user actions logged for traceability
+
+Users can view logs related to their own actions
+
+8. System Administration & Configuration
+
+User Management
+
+Both Admin creation and self-registration allowed
+
+Admins can manually assign/change roles
+
+Users cannot edit their profiles after registration
+
+Department & Project Management
+
+System Admins and Finance can create/edit/deactivate departments
+
+Projects cannot be deleted, only canceled or marked expired
+
+Approval Workflow Configuration
+
+System Admins can modify approval workflows (tracked in audit trail)
+
+9. User Signup Fields
+
+Upon signup, the user must provide:
+
+Full Name
+
+Company Number
+
+Department
+
+Email
+
+Home Address
+
+Login Name
+
+The department information is critical to trigger the correct approval workflow for trip requests.

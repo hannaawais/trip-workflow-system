@@ -1,0 +1,133 @@
+
+Trip Transportation Workflow
+
+F
+Finance
+Navigation
+
+Dashboard
+All Requests
+New Admin Request
+Approvals
+Budget Analytics
+Reports
+Payment Dashboard
+F
+Finance
+
+Finance
+
+Trip Requests (100)
+Administrative Requests (6)
+Filters:
+Search employee...
+
+All Depts
+
+All Types
+
+All Status
+
+mm/dd/yyyy
+to
+
+mm/dd/yyyy
+
+
+25
+Export Excel
+
+#
+
+Employee
+
+Department
+
+Origin
+
+Destination
+
+Trip Date
+
+Type
+
+Cost (JD)
+
+Trip Status
+#118	Hanna Awais	Operations	-	JTH	Jun 11, 2025	Planned	11.79	Paid
+#117	Hanna Awais	Operations	-	JTH	Jun 11, 2025	Urgent	11.79	Approved
+#116	Hanna Awais	Operations	-	MNGH	Jun 11, 2025	Planned	40.00	Approved
+#115	Hanna Awais	Operations	-	JTH	Jun 11, 2025	Ticket	11.79	Pending Finance Approval
+#114	Hazem Mousa	test	-	JTH	Jun 16, 2025	Planned	22.40	Pending Finance Approval
+#113	Hanna Awais	Operations	-	BASH	Jun 12, 2025	Urgent	15.50	Pending Finance Approval
+#112	Hanna Awais	Operations	-	JTH	Jun 15, 2025	Planned	12.85	Approved
+#110	Hanna Awais	Operations	-	AQAB	Jun 12, 2025	Urgent	35.00	Paid
+#109	Hanna Awais	Operations	-	AMM	Jun 12, 2025	Urgent	25.00	Paid
+#108	Hanna Awais	Operations	-	JTH	Jun 11, 2025	Ticket	11.79	Paid
+#107	Hanna Awais	Operations	-	KGH	Jun 15, 2025	Planned	30.00	Paid
+#106	Hanna Awais	Operations	-	KGH	Jun 14, 2025	Planned	50.00	Paid
+#105	Hanna Awais	Operations	-	KGH	Jun 13, 2025	Planned	75.00	Paid
+#104	Hanna Awais	Operations	-	JTH	Jun 12, 2025	Urgent	15.00	Paid
+#103	Hanna Awais	Operations	-	JTH	Jun 12, 2025	Urgent	20.00	Pending Project Approval
+#102	Hanna Awais	Operations	-	KGH	Jun 12, 2025	Ticket	30.00	Pending Department Approval
+#101	Hanna Awais	Operations	-	KGH	Jun 12, 2025	Planned	25.00	Paid
+#100	Hanna Awais	Operations	-	JTH	Jun 11, 2025	Planned	11.79	Paid
+#99	Hanna Awais	Operations	-	KGH	Jun 10, 2025	Planned	20.00	Paid
+#98	Hanna Awais	Operations	-	JTH	Jun 10, 2025	Planned	11.79	Paid
+#97	Hanna Awais	Operations	-	JTH	Jun 10, 2025	Urgent	11.79	Pending Project Approval
+#96	Hanna Awais	Operations	-	JTH	Jun 10, 2025	Urgent	11.79	Paid
+#95	Hanna Awais	Operations	-	KGH	Jun 10, 2025	Planned	2.00	Pending Project Approval
+#94	Hanna Awais	Operations	-	JTH	Jun 10, 2025	Ticket	11.79	Rejected
+#93	Hanna Awais	Operations	-	JTH	Jun 10, 2025	Planned	3.00	Pending Project Approval
+Showing 1 to 25 of 100 trips
+
+Previous
+Page 1 of 4
+Next
+0
+Trip Request #118
+Complete request details and approval workflow
+
+Paid
+Employee Information
+Employee Name
+Hanna Awais
+Department
+Operations
+Employee No
+507
+Trip Details
+From
+- Unknown Site, Unknown City
+To
+JTH - Jamil Totanjy Hospital , Jerash
+Trip Date
+Jun 11, 2025
+Trip Type
+Planned
+Distance Used
+58.95 km
+Calculation Method
+Distance-based
+Purpose
+Not specified
+Cost Calculation
+Total Cost
+11.79 JD
+KM Rate
+0.2 JD/km
+Calculation Method
+Distance-based
+Project Information
+Project Name
+Marketing Campaign
+Project Manager
+Mohammad Qaisy
+Approval Workflow
+Project Manager (Mohammad Qaisy)
+Approved Jun 11, 2025by Mohammad Qaisy
+Finance Approval (Finance)
+Approved Jun 11, 2025by Finance
+Finance Payment
+Pending payment
+Close

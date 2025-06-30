@@ -1,0 +1,44 @@
+I'll examine the project management rules and transportation workflow constraints in your system.
+Opened server/db_storage.ts
+Searched for "Find project creation and validation rules, especially budget and activation constraints"
+Based on my examination of the codebase, here are the Project Management Rules and Transportation Workflow Constraints:
+Project Activation Rules
+Yes, there is a rule preventing activation of zero-budget projects:
+Searched for "Find project creation logic with budget and activation constraints"
+Based on my analysis of your codebase, here are the Project Management Rules and Transportation Workflow Constraints:
+Project Activation Rules
+Yes, zero-budget projects cannot be activated. Here are the specific rules:
+Project Budget & Activation Constraints
+•	Zero Budget Rule: Projects with budget ≤ 0 are automatically deactivated
+•	Expired Projects: Projects past expiry date are automatically deactivated
+•	Manager Creation: Only Finance/Admin can set project budgets; Managers create with 0 budget (inactive by default)
+•	Budget Validation: All budgets must be positive numbers (≥ 0) but projects need > 0 to be active
+Transportation Project Workflow Rules
+Budget Enforcement
+•	Project managers cannot approve trips if insufficient budget available
+•	Budget is reserved when project manager approves (first approval)
+•	Budget is restored if subsequent approvers reject the request
+•	Real-time budget validation prevents overruns at source
+•	Urgent trips bypass budget constraints entirely
+Trip Cost Validation
+•	Kilometer-based trips use current rate (0.15 JD/km default)
+•	Direct cost entry allowed for non-distance trips
+•	Server-side cost recalculation during approval process
+•	Finance must validate all costs before final approval
+Project Assignment Rules
+•	Only active projects can be selected for trip requests
+•	Project manager must be primary approver for project-assigned trips
+•	Projects require department assignment and primary manager
+•	Second manager assignment is optional
+Approval Workflow Constraints
+•	Department approval → Project approval → Finance approval → Admin review
+•	Project managers cannot approve their own trip requests
+•	Budget excess triggers automatic rejection with specific error amounts
+•	All approvals tracked with complete audit trail
+Project Modification Restrictions
+•	Project name cannot be changed after creation
+•	Budget modifications require administrative request process
+•	Department assignment cannot be modified after creation
+•	Primary manager assignment is permanent
+•	Only document deletion allowed (marked as deleted, not removed)
+These rules ensure strict budget control, proper approval hierarchies, and comprehensive audit tracking throughout the transportation workflow system.

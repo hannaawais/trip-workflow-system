@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Temporary files
+*cookies*.txt
+*test*.txt
+budget-*.txt
+test_*.txt
+*_test_*.txt
+*final*.txt
+temp-*.txt
+*.tmp
