@@ -4,6 +4,7 @@ import { Express } from "express";
 import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
+import bcrypt from 'bcrypt';
 import { storage } from "./db_storage";
 import { User as SelectUser, registrationSchema } from "@shared/schema";
 import { PermissionService } from "./permissions";
@@ -32,7 +33,31 @@ export async function hashPassword(password: string) {
 }
 
 export async function comparePasswords(supplied: string, stored: string) {
+  console.log("DEBUG: comparePasswords called");
+  console.log("DEBUG: supplied password:", supplied);
+  console.log("DEBUG: stored hash:", stored);
+  console.log("DEBUG: stored hash starts with $2b$:", stored.startsWith('$2b$'));
+  
+  // Check if stored password is bcrypt hash (starts with $2b$, $2a$, or $2y$)
+  if (stored.startsWith('$2b$') || stored.startsWith('$2a$') || stored.startsWith('$2y$')) {
+    // Use bcrypt comparison for bcrypt hashes
+    try {
+      console.log("DEBUG: Using bcrypt comparison");
+      const result = await bcrypt.compare(supplied, stored);
+      console.log("DEBUG: bcrypt comparison result:", result);
+      return result;
+    } catch (error) {
+      console.error('Bcrypt comparison error:', error);
+      return false;
+    }
+  }
+  
+  console.log("DEBUG: Using scrypt comparison (fallback)");
+  // Original scrypt comparison for custom hashed passwords
   const [hashed, salt] = stored.split(".");
+  if (!hashed || !salt) {
+    return false;
+  }
   const hashedBuf = Buffer.from(hashed, "hex");
   const suppliedBuf = (await scryptAsync(supplied, salt, 64)) as Buffer;
   return timingSafeEqual(hashedBuf, suppliedBuf);
